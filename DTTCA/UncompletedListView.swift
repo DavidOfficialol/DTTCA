@@ -12,7 +12,7 @@ struct UncompletedListView: View {
         NavigationStack {
             List {
                 Section(header: Text("New List")) {
-                    NavigationLink(destination: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/) {
+                    NavigationLink(destination: NewLIstView()) {
                         HStack {
                             Image(systemName: "plus")
                             Text("New List")
