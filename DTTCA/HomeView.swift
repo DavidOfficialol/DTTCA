@@ -13,27 +13,24 @@ struct HomeView: View {
             NavigationStack {
                 List {
                     NavigationLink(destination: UncompletedListView()) {
-                        Image(systemName: "checklist.unchecked")
-                        Text("Uncompleted Lists")
+                        Label("Uncompleted Lists", systemImage: "checklist.unchecked")
                     }
                     NavigationLink(destination: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/) {
                         HStack {
-                            Image(systemName: "scroll")
-                            Text("Completed Lists")
+                            Label("Completed", systemImage: "scroll")
                         }
                     }
                     NavigationLink(destination: SettingsView()) {
                         HStack {
-                            Image(systemName: "gearshape.fill")
-                            Text("Settings")
+                            Label("Settings", systemImage: "gearshape.fill")
                         }
                     }
                     Section(header: Text("Quick Actions")) {
                         
                     }
                 }
-            }        }
-        .padding()
+            }
+        }
     }
 }
 
@@ -44,6 +41,7 @@ struct HomeView: View {
 struct SetLisV: View {
     var image: String
     var name: String
+    
     var body: some View {
         Toggle(isOn: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Is On@*/.constant(true)/*@END_MENU_TOKEN@*/) {
             HStack {
